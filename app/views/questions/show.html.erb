@@ -1,0 +1,8 @@
+<p class="title"><span><%= params[:id] %> &#8688 </span><span><%= @question.questionTitle%></span><p>
+<form action="/answers" method="post" class='form'>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>"/>
+    <input type="hidden" name="answer[questionId]" value=<%= params[:id] %>/>
+    <textarea name="answer[answerBody]" rows="1" cols="50", placeholder="Type your answer here..." class="textbody"></textarea>
+    </br>
+    <input type="submit" value="Submit"/>
+</form>
